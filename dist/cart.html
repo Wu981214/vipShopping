@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="css/head.css"/>
+	<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			let top_username=document.getElementsByClassName("top_username")[0];
+			let user=null;
+			let id =null;
+			var url=window.location.href;
+			var urlIndex = url .split("?name=")[1];
+			var arr = urlIndex.split("&id=");
+			user =arr[0];
+			id = arr[1];
+			if(user!=null){
+				str=`
+					你好!${user}
+				`;
+				top_username.innerHTML=str;
+			}
+			let cart = new Cart(user);
+			cart.show("cart_show");
+		}
+	</script>
+	<body>
+		<div class="top">
+			<div class="top_center">
+				<div class="top_logo">
+					<a href=""></a>
+				</div>
+				<div class="top_list">
+					<div class="top_user">
+						<span class="top_username">你好某某某<i></i></span>
+						<a href="">[退出]</a>
+						<a href="">订单管理</a>
+					</div>
+					<span class="tubiao"></span>
+					<div class="top_phone">
+						<span class="iconfont icon-xinfeng"></span>
+						130-8567-839
+					</div>
+					<span class="tubiao" style="margin-top: 2px;"></span>
+					<div class="top_phone">
+						<span class="iconfont icon-ren"></span>
+						在线客服
+					</div>
+					<span class="tubiao" style="margin-top: 2px;"></span>
+					<div class="top_phone">
+						<span class="iconfont icon-ren"></span>
+						会员服务
+					</div>
+				</div>
+				<ul>
+					<li>
+						<span></span>
+						<p>正品保证</p>
+					</li>
+					<li>
+						<span></span>
+						<p>七天无理由放心退</p>
+					</li>
+					<li>
+						<span></span>
+						<p>限时抢购</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="cart">
+			<div class="cart_center">
+				<div class="cart_header">
+					<a href="">特卖商品<span></span></a>
+					<span class="tubiao"></span>
+					<a href="">唯品医药</a>
+				</div>
+				<div class="cart_delievry">
+					<span>配送到<b>郑州市金水区</b></span>
+					<i class="tubiao"></i>
+					<p>请在倒计时结束前提交订单，下单后你另有 30 分钟的支付时间。</p>
+					<span class="iconfont icon-shijian"></span>
+				</div>
+				<div class="cart_list">
+					<ul>
+						<li>精选特卖 </li>
+						<li>单价</li>
+						<li>数量</li>
+						<li>小计</li>
+						<li>删除</li>
+					</ul>
+				</div>
+				<div class="cart_show">
+					
+					
+				</div>
+				<div class="cart_list_footer">
+					<span>运费</span>
+					<p>唯品自营: 唯品自营商品已满288元，已享免10元运费</p>
+					<i class="iconfont icon-shijian"></i>
+				</div>
+			</div>
+		</div>
+		<div class="checkOut">
+			<div class="checkOut_top">
+				<div class="youhui">
+					<span>使用优惠券</span>
+					<span>使用惠口令</span>
+				</div>
+				<div class="zongjia">
+					<p>共<em>5</em>件商品  商品金额<span>￥505</span></p>
+					<p>总金额（未含运费）<span>￥505</span></p>
+				</div>
+			</div>
+			<div class="checkOut_bottom">
+				<div class="tixing">
+					请在商品确认后进行结算
+					<span class="iconfont icon-shijian"></span>
+				</div>
+				<div class="jiesuan">
+					立即结算
+				</div>
+			</div>
+		</div>
+		<div class="warranty">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="footer-inner">
+			<div class="footer_center">
+				<div class="footer_info">
+					<p>关于我们| About us| Investor Relations| 媒体报道| 品牌招商| 隐私条款| 唯品诚聘| 唯品卡| 联系我们</p>
+					<p><span>Copyright © 2008-2019 vip.com，All Rights Reserved  使用本网站即表示接受 唯品会用户协议。版权所有 广州唯品会电子商务有限公司 </span>
+						<span>粤公网安备 44010302111111号    粤ICP备08114786号 增值业务经营许可证：粤B2-20170777 网络文化经营许可证：粤网文〔2018〕5030-1743号 </span>
+						<span>自营主体经营证照   风险监测信息   互联网药品信息服务资格证书：（粤）-经营性-2018-0271 网络食品交易第三方平台备案凭证：粤B2-20170777 医疗器械网络交易服务第三方平台</span>
+						<span>备案凭证：（粤）网械平台备字[2019]第00001号</span>
+					</p>
+				</div>
+				<div class="footer_bottom">
+					<span></span>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

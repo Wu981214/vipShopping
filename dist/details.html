@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>详情页</title>
+	</head>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/head.css"/>
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/head.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/details.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div class="top">
+			<div class="top_center">
+					<div class="top_let">
+						<select class="top_left_select">
+							<option value ="">郑州市</option>
+							<option value ="">郑州市</option>
+							<option value ="">郑州市</option>
+							<option value ="">郑州市</option>
+							<option value ="">郑州市</option>
+						</select>
+					</div>
+					<div class="top_right">
+							<ul>
+								<li class="pleaselogin" style="line-height: 1.5;"><a href="#" >请登录</a></li>
+								<li><a href="#">注册<span></span></a></li>
+								<li class="sign_in"><a href="#">签到有礼<span></span></a></li>
+								<li><a href="#"><a href="#">我的订单<span></span></a></li>
+								<li class="myIndet"><a href="#">我的特卖<i class="ico-dis"></i><span></span></a></li>
+								<li class="myVip"><a href="#"><a href="#">会员俱乐部<i class="ico-dis1"></i><span></span></a></li>
+								<li class="myService"><a href="#">客户服务<span></span></a></li>
+								<li class="myCode"><a href="#">手机版<span></span></a></li>
+								<li class="myMore"><a href="#">更多<span></span></a></li>
+							</ul>
+					</div>
+					<div class="top_please_none" id="stamp">
+						<span class="top_please_top">请登录</span>
+						<span class="top_please_lucency"></span>
+						<div class="top_please_login">
+							<div class="top_please_login_top">
+								<span></span>
+								<p class="lg">您好![请<a href="login.html">登录</a>]</p>
+								<ul>    
+									<li>我的收藏</li>
+									<li>我的订单</li>
+									<li>零钱</li>
+									<li>我的优惠券</li>
+									<li>我的唯品币</li>
+									<li>唯品金融</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="top_sign_none" id="sign">
+						<div class="top_sign_in">
+							<div class="sign_circle">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="sign_wire">
+								<span></span>
+							</div>
+							<div class="sign_font">
+								<span>1天</span>
+								<span>2天</span>
+								<span>3天</span>
+								<span>4天</span>
+								<span>5天</span>
+								<span>6天</span>
+								<span>7天</span>
+							</div>
+						</div>
+						<div class="top_sign_btn">
+							<a href="#">每天签到送惊喜， 连续签到更享心动奖励</a>
+							<span>签到</span>
+						</div>
+					</div>
+					<div class="top_indet_none" id="indet">
+						 <ul>
+							<li><a href="">我的特卖</a><span class="ico-dis2"></span></li>
+							<li><a href="">商品收藏</a></li>
+							<li><a href="">品牌收藏</a></li>
+							<li><a href="">我的足迹</a></li>
+						</ul>
+					</div>
+					<div class="top_vip_none" id="vip">
+						 <ul>
+							<li><a href="">会员俱乐部</a><span class="ico-dis2"></span></li>
+							<li><a href="">俱乐部首页</a></li>
+							<li><a href="">唯品币兑换</a></li>
+						</ul>
+					</div>
+					<div class="top_service_none" id="service">
+						 <ul>
+							<li><a href="">客户服务</a><span class="ico-dis2"></span></li>
+							<li><a href="">联系客服</a></li>
+							<li><a href="">帮助中心</a></li>
+							<li><a href="">服务中心</a></li>
+							<li><a href="">产权投诉</a></li>
+						</ul>
+					</div>
+					<div class="top_code" style="display: none;">
+						<p>手机版</p>
+					</div>
+					<div class="top_code_qj" style="display: none";>
+						<i></i>
+						<img src="img/1.7.jpg" >
+						<p>随时逛，及时抢</p>
+					</div>
+					<div class="top_more" style="display: none;">
+						<p>更多</p>
+					</div>
+					<div class="top_more_list" style="display: none;">
+						<i></i>
+						<div class="top_more_zhuanqu">
+							<h3>合作专区</h3>
+							<span>联名卡申请</span>
+							<span>唯品卡</span>
+						</div>
+						<div class="top_more_guanyu">
+							<h3>关于我们</h3>
+							<span>联名卡申请</span>
+							<span>Sell on vip</span>
+							<span>官方博客</span>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="seek">
+			<div class="header_logo">
+				<a href=""><img src="img/1.4.png" ></a>
+			</div>
+			<div class="header_vip">
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+			<div class="header_seek">
+				<input type="text" name="" id="" value="" class="text" placeholder="连衣裙"/>
+				<span class="btn"><img src="" ></span>
+				<ul>
+					<li><a href="#">连衣裙</a><span class="header_seek_line">|</span></li>
+					<li><a href="#">女式套装</a><span class="header_seek_line">|</span></li>
+					<li><a href="#">女式T恤</a><span class="header_seek_line">|</span></li>
+					<li><a href="#">女式衬衫</a><span class="header_seek_line">|</span></li>
+					<li><a href="#">女式牛仔裤</a><span class="header_seek_line">|</span></li>
+					<li><a href="#">女休闲鞋</a></li>
+				</ul>
+			</div>
+			<div class="header_shop">
+				<div class="header_shop_logo"></div>
+				<!-- <div class="header_shop_font"></div> -->
+				<p>购物袋</p>
+				<span>0</span>
+			</div>
+			<div class="seek_search">
+				<ul class="seek_search_ul">
+					
+				</ul>
+			</div>
+			<div class="seek_recommend" style="display: none;">
+				<div class="seek_recommend_left">
+					<p>搜索历史</p>
+				</div>
+				<div class="seek_recommend_right">
+					<p>精选推荐</p>
+					<ul>
+						<li><a href="">连衣裙</a></li>
+						<li><a href="">女式套装</a></li>
+						<li><a href="">女式</a></li>
+						<li><a href="">女式衬衫</a></li>
+						<li><a href="">女式牛仔裤</a></li>
+						<li><a href="">女休闲鞋</a></li>
+						<li><a href="">女单鞋</a></li>
+						<li><a href="">半截裙</a></li>
+						<li><a href="">女式休闲裤</a></li>
+						<li><a href="">文胸</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="nav ">
+			<div class="nav_product">
+				<span></span><p >商品归类
+					<ul  id="classify" style="display: none;">
+						<li>女装/男装/内衣</li>
+						<li>女鞋/男鞋/箱包</li>
+						<li>护肤彩妆/个护</li>
+						<li>运动户外</li>
+						<li>家电数码</li>
+						<li>母婴童装</li>
+						<li>手表配饰</li>
+						<li>居家用品</li>
+						<li>唯品生活</li>
+						<li>唯品国际/唯品奢</li>
+						<li>医药健康</li>
+					</ul>
+				</p> 
+				<div class="nav_product_precise" style="display: none;">
+					<div class="nav_product_precise_left">
+						
+						
+					</div>
+					<div class="nav_product_precise_right">
+						
+					</div>
+				</div>
+			</div>
+			<div class="nav_list">
+				 <ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">最后疯抢</a></li>
+					<li><a href="#">唯品快抢</a></li>
+					<li class="womensWear"><a href="list.html">女装</a></li>
+					<li><a href="#">母婴</a></li>
+					<li><a href="#">家电</a></li>
+					<li><a href="#">国际</a></li>
+					<li><a href="#">美妆</a></li>
+					<li><a href="#">鞋包</a></li>
+					<li><a href="#">男装</a></li>
+					<li><a href="#">预告</a></li>
+					<li><a href="#">更多</a></li>
+					
+				</ul> 
+			</div>
+		</div>
+		<div class="body_right">
+			<ul>
+				<li class="body_right_one"><span class="iconfont icon-ren"></span>账号
+					<div class="accountNumber" style="display: none;">
+						 <span class="iconfont icon-guanbi"></span>
+						 <img src="img/2.0.jpg" >
+						 <p class="accountNumber_p">你好!,请<a href="">登录</a>&nbsp;|&nbsp;<a href="">注册</a></p>
+						 <ul>
+						 	<li><span class="iconfont icon-icon-test"></span>我的订单</li>
+							<li><span class="iconfont icon-xinfeng"></span>我的消息</li>
+						 </ul>
+						 <em>会员俱乐部</em>
+					</div>
+				</li>
+				<li><span class="iconfont icon-suo"></span><i>购物袋</i><p class="shopping_link_num">0</p></li>
+				<li class="body_right_tdree"><span class="iconfont icon-youhuiquan"></span>
+					<div class="body_right_youhui" style="display: none;">
+						我的优惠券
+					</div>
+				</li>
+				<li class="body_right_four"><span class="iconfont icon-xin"></span>
+					<div class="body_right_shoucang" style="display: none;">
+						品牌收藏
+					</div>
+				</li>
+				<li class="body_right_five"><span class="iconfont icon-xingxing1"></span>
+					<div class="body_right_shangjia" style="display: none;">
+						商家收藏
+					</div>
+				</li>
+				<li class="body_right_six"><span class="iconfont icon-shijian"></span>
+					<div class="body_right_zuji" style="display: none;">
+						我的足迹
+					</div>
+				</li>
+			</ul>
+			<em>
+				<li><span class="iconfont icon-23"></li>
+				<li><span class="iconfont icon-shangjiantou"></li>
+			</em>
+		</div>
+		<div class="details">
+			<div class="details_center">
+				<div class="details_list">
+					<div class="details_list_left">
+						<div class="details_img">
+							
+						</div>
+						<div class="big_img" style="display: none;">
+							
+						</div>
+						<div class="miniImg">
+							
+						</div>
+						<div class="product_text">
+							<p>商品编码：N865547231</p>
+							<b><i></i>收藏商品</b>
+							<em><i></i>分享到：</em>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="product_pledge">
+							<ul>
+								<li><i></i>100%正品</li>
+								<li><i></i>上市公司</li>
+							</ul>
+						</div>
+					</div>
+					<div class="details_list_right">
+						<div class="details_data">
+							<p class="right_totil">香影</p>
+							<p class="right_biaoti">香影春装新款韩版时尚撞色拼接长袖套头毛衣显瘦针织衫女</p>
+							<p class="right_pic">长袖套头毛衣显瘦针织衫</p>
+							<div class="dtl_price">
+							<div class="dtl_discount">
+								<p class="dtl_dPrice">折后价&nbsp;￥<em>89</em></p>
+								<div class="dtl_vPrice">
+									<p>唯品价￥143 &nbsp;<span>￥865</span><i>1.0折</i></p>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+						<dl class="dtl_d1">
+							<dt>配送</dt>
+							<dd >
+								<select>
+									<option value ="请选择省市区">请选择省市区</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="dtl_d2">
+							<dt>尺码</dt>
+							<dd>
+								<span>S</span>
+								<span>M</span>
+								<span>L</span>
+							</dd>
+						</dl>
+						<dl class="dtl_d3">
+							<dt>数量</dt>
+							<dd>
+								<span class="plus_">+</span>
+								<input type="text" name="" id="" value="1" class="dtl_num"/>
+								<span class="minus_">-</span>
+							</dd>
+						</dl>
+						<div class="dtl_shoping">
+							<span class="cart_shopping"><i class="iconfont icon-suo"></i>加入购物袋</span>
+							<p>购买可最多获得<em>57</em>个唯品币</p>
+						</div>
+						<div class="dtl_zaixian">
+							<dl>
+								<dt>客服</dt>
+								<dd><span></span><a href="">在线客服</a>(09:00-18:00)</dd>
+							</dl>
+							<dl>
+								<dt>服务</dt>
+								<dd>
+									<ul>
+										<li><span></span>唯品会自营</li>
+										<li><span></span>7天无理由退货</li>
+										<li><span></span>退货返10个唯品币</li>
+										<li><span></span>7天可换</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="del_show">
+			<div class="show_list">
+				<ul>
+					<li>商品详情</li>
+					<li>购物说明</li>
+					<li>全部口碑</li>
+					<li>商品咨询</li>
+					<li>关于我们</li>
+				</ul>
+			</div>
+			<div class="show_size">
+				<span></span>
+				<p>商品尺码<i>SIZE</i></p>
+			</div>
+			<div class="show_tips">
+				<dl>
+					<dt>TIPS</dt>
+					<dd>1.选购时，请综合参考尺码表中各项参数，有助于你选择到更合适的尺码。</dd>
+					<dd>2.（只适用服装）平铺测量自己的合身服装尺寸作参考，对比选购更准确！</dd>
+					<dd>3. 请放心挑选尺码，唯品7天退货无忧替你保驾护航。</dd>	
+				</dl>
+				<div class="size_table">
+					<p>我的尺码<span>(录入身高、体重、肩宽、三围为您推荐合适的尺码，录入一次即可为您保存长期使用哦！)</span></p>
+					<div class="table">
+						<img src="img/11.7.jpg" >
+						<div class="tables">
+							<div class="tables_all">
+								<label>身高:</label>
+								<input type="text" name="" id="" value="" />
+								<span>cm</span>
+							</div>
+							<div class="tables_all">
+								<label>体重:</label>
+								<input type="text" name="" id="" value="" />
+								<span>cm</span>
+							</div>
+							<div class="tables_all">
+								<label>肩宽:</label>
+								<input type="text" name="" id="" value="" />
+								<span>cm</span>
+							</div>
+							<div class="tables_all">
+								<label>身围:</label>
+								<input type="text" name="" id="" value="" />
+								<span>cm</span>
+							</div>
+							<div class="tables_all">
+								<label>腰围:</label>
+								<input type="text" name="" id="" value="" />
+								<span>cm</span>
+							</div>
+							<div class="tables_all">
+								<label>臀围:</label>
+								<input type="text" name="" id="" value="" />
+								<span>cm</span>
+							</div>
+							<div class="tables_btn">
+								<span>保存</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contrast">
+					<table>
+						<tbody>
+							<tr>
+								<td>尺码</td>
+								<td>号型</td>
+								<td>肩宽</td>
+								<td>胸围</td>
+								<td>袖长</td>
+								<td>腰围</td>
+								<td>裙长</td>
+							</tr>
+							<tr>
+								<td>S</td>
+								<td>155/80A</td>
+								<td>34.5</td>
+								<td>92</td>
+								<td>61</td>
+								<td>63</td>
+								<td>99.5</td>
+							</tr>
+							<tr>
+								<td>M</td>
+								<td>160/84A	</td>
+								<td>35.5</td>
+								<td>96</td>
+								<td>62</td>
+								<td>66</td>
+								<td>101.5</td>
+							</tr>
+							<tr>
+								<td>L</td>
+								<td>165/88A	</td>
+								<td>36.5</td>
+								<td>100</td>
+								<td>63</td>
+								<td>69</td>
+								<td>103.5</td>
+							</tr>
+							<tr>
+								<td colspan="7"><span style="color: red;">温馨提示</span>： A表示一般体型(Li:身高170CM 体重50KG 三围84,61,88 试穿尺码：S码)</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="chart">
+						<img src="img/11.8.jpg" >
+					</div>
+				</div>
+				<div class="show_size">
+					<span></span>
+					<p>商品参数<i>DETAIL</i></p>
+				</div>
+				
+			</div>
+			<div class="canshu">
+				<table >
+					<tbody>
+						<tr>
+							<th>适用季节:</th>
+							<td>夏,秋</td>
+							<th>裙型：</th>
+							<td>A字裙</td>
+						</tr>
+						<tr>
+							<th>腰型：</th>
+							<td>高腰</td>
+							<th>款式：</th>
+							<td>无弹</td>
+						</tr>
+						<tr>
+							<th>肩型：</th>
+							<td>常规肩</td>
+							<th>适用人群：</th>
+							<td>青少年,青年,中年</td>
+						</tr>
+						<tr>
+							<th>袖长：</th>
+							<td>长袖</td>
+							<th>选购热点：</th>
+							<td>主推款</td>
+						</tr>
+						<tr>
+							<th>袖型：</th>
+							<td>常规</td>
+							<th>风格：</th>
+							<td>休闲,时尚,潮流,百搭</td>
+						</tr>
+						<tr>
+							<th>适用场合：</th>
+							<td>约会,通勤,校园,旅游,逛街</td>
+							<th>厚薄：</th>
+							<td>常规</td>
+						</tr>
+						<tr>
+							<th>裙长：</th>
+							<td>中长裙</td>
+							<th>版型：</th>
+							<td>修身</td>
+						</tr>
+						<tr>
+							<th>领型：</th>
+							<td>V领</td>
+							<th>图案：</th>
+							<td>纯色</td>
+						</tr>
+						<tr>
+							<th>面料：</th>
+							<td>锦纶(尼龙)</td>
+							<th>品牌名称：</th>
+							<td>香影</td>
+						</tr>
+						<tr>
+							<th>商品名称：</th>
+							<td>【2019秋装新款】香影夏秋新款刺绣仙女百褶收腰v领网纱连衣裙</td>
+							<th>产地：</th>
+							<td>杭州</td>
+						</tr>
+						<tr>
+							<th>材质：</th>
+							<td>面料：100%锦纶 </td>
+							<th>是否有防盗扣：</th>
+							<td>否</td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</div>
+			<div class="show_size">
+				<span></span>
+				<p>商品参数<i>DETAIL</i></p>
+			</div>
+			<div class="show_img">
+				<img src="img/11.9.jpg" >
+				<img src="img/12.0.jpg" >
+				<img src="img/12.1.jpg" >
+				<img src="img/12.2.jpg" >
+				<img src="img/12.3.jpg" >
+				<img src="img/12.4.jpg" >
+				<img src="img/12.5.jpg" >
+				<img src="img/12.6.jpg" >
+				<img src="img/12.7.jpg" >
+				<img src="img/12.8.jpg" >
+				<img src="img/12.9.jpg" >
+				<img src="img/13.0.jpg" >
+				<img src="img/13.1.jpg" >
+				<img src="img/13.2.jpg" >
+				<img src="img/13.3.jpg" >
+				<img src="img/13.4.jpg" >
+				<img src="img/13.5.jpg" >
+				<img src="img/13.6.jpg" >
+				<img src="img/13.7.jpg" >
+				<img src="img/13.8.jpg" >
+				<img src="img/13.9.jpg" >
+				<img src="img/14.0.jpg" >
+				<img src="img/14.1.jpg" >
+			</div>
+			<div class="afterSale">
+				<h3>售后说明</h3>
+				<div class="afterSale_each">
+					<h4><span></span>唯品会自营</h4>
+					<p>本商品由唯品会安排发货，并提供售后服务。</p>
+				</div>
+				<div class="afterSale_each">
+					<h4><span></span>7天无理由退货</h4>
+					<p>该商品支持7天无理由退货，请放心购买！</p>
+				</div>
+				<div class="afterSale_each">
+					<h4><span></span>退货返10元唯品币</h4>
+					<p>任何原因产生的订单退货邮费，唯品会都将补贴10元唯品币（1000个)</p>
+				</div>
+				<div class="afterSale_each">
+					<h4><span></span>7天可换</h4>
+					<p>该商品支持换货，订单签收7天内可申请换货 </p>
+				</div>
+			</div>
+			<div class="interest">
+				<h3>看了又看 <span>关注了该商品的用户还在关注</span></h3>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/14.2.jpg" ></dt>
+					<dd>
+						<p>香影夏季新款流行海边沙滩度假</p>
+						<span>￥299 <em>￥1399</em></span>
+					</dd>
+				</dl>
+			</div>
+			<div class="interest_talk">
+				<h3>商品咨询</h3>
+				<a href="">购买前如有问题，请向唯品会咨询。<span>联系客服</span></a>
+				<div class="talk">
+					<p><i></i>商品都是正品吗？</p>
+					<p><i></i>请你放心，唯品会www.vip.com上所售卖的商品均确保正品，并由中国人民财产保险股份有限公司为你购买的每一件商品进行承保。</p>
+				</div>
+				<div class="talk">
+					<p><i></i>衣服图片上搭配的腰带、项链等配件，会连商品一同送货吗？？</p>
+					<p><i></i>这点请注意咯，如非特别说明，服装类商品图片中的腰带、饰品等配件均为拍摄搭配之用，是不包含在所售商品中的。</p>
+				</div>
+				<div class="talk">
+					<p><i></i>尺码表上的尺码标准吗</p>
+					<p><i></i>唯品会所售商品尺寸均为人工测量，可能会存在1-2cm的正常误差范围。</p>
+				</div>
+				<div class="talk">
+					<p><i></i>图片颜色和实物颜色是否相同？？</p>
+					<p><i></i>唯品会所有商品均采用专业拍摄，力求将最真实的信息传达至你的视线。但由于个人显示器不同，可能导致实物与图片存在色差，最终颜色以实物为准。</p>
+				</div>
+				<div class="talk">
+					<p><i></i>为什么我收到的商品包装和图片显示的不一致？？</p>
+					<p><i></i>由于部分商品生产批次不一，你收到货品的包装有可能与网站上图片不完全一致，但唯品会保证所售商品均为正品，商品包装请以实物为准。</p>
+				</div>
+				<div class="talk">
+					<p><i></i>唯品会的对比价格：</p>
+					<p><i></i>唯品会展示的中间未划横线价格（显示如¥799）为唯品会销售价，该价格是交易成交价，是您最终决定是否购买商品的依据。
+唯品会展示的中间划横线价格（显示如 ¥2899）为参考价，采集自品牌专柜标价、商品吊牌价、品牌官网价格或由供应商提供的正品零售价；由于地区、时间、货币汇率等的差异及存在品牌方调价、市场行情波动、产品批次等因素，品牌专柜标价、商品吊牌价等可能会与您购物时网页显示的划线价不一致。该价格仅供您参考。
+折扣比为唯品会销售价与参考价的对比（该值四舍五入后采小数点后1位，如¥799/¥2899=0.2756=2.8折），该对比值仅供您参考，不作为结算基数。</p>
+				</div>
+				<div class="talk">
+					<p><i></i>如何退货？？</p>
+					<p><i></i>在你签收商品之日起的7天之内，唯品会为你提供七天无理由放心退服务，但以下情形将不能退货：1、非唯品会销售的商品，或有明显使用痕迹影响二次销售的商品；2、法律明确规定不适用七天无理由退货的商品；3、基于安全及健康的考虑，已拆封的食品、药品、保健品、化妆品、贴身用品等；4、已经激活的手机、电脑、数码产品等；5、已在线交付的充值类商品；6、未经授权的维修、误用、碰撞、疏忽、滥用、进液、事故、改动、不正确的安装所造成的商品质量问题，或撕毁、涂改标贴、机器序号、防伪标记；7、无法提供商品的发票（如已索要发票）、保修卡等三包凭证或者三包凭证信息与商品不符及被涂改的；8、礼包或套装中的商品不可以部分退换货。详见唯品会退货政策。上述退货规则，客户一经购买，视为认可。 查看详细退货</p>
+				</div>
+			</div>
+			<div class="tuihuo">
+				<h4>退货流程如下</h4>
+				<img src="img/14.3.png" >
+			</div>
+			<div class="guanyu">
+				<h3>关于我们</h3>
+				<ul >
+                    <li><span></span></li>   
+					<li><span></span></li>    
+					<li><span></span></li>    
+					<li><span></span></li>    
+					<li><span></span></li>    
+					<li><span></span></li>    
+					<li><span></span></li>    
+                 </ul>
+				 <span></span>
+				<img src="img/14.6.jpg" >
+			</div>
+		</div>
+		<div class="footer-inner">
+			<div class="footer_center">
+				<ul>
+					<li><i>中国第三</i></li>
+					<li><i>全球直采</i></li>
+					<li><i>一手资源</i></li>
+					<li><i>入仓全检</i></li>
+					<li><i>自营物流</i></li>
+					<li><i>线下验真</i></li>
+					<li><i>假货必配</i></li>
+					<li><i>任意退换</i></li>
+					<li><i>万千信赖</i></li>
+					<li><i>权威荣誉</i></li>
+				</ul>
+				<div class="footer_list">
+					<dl class="list_link">
+						<dt>服务保障</dt>
+						<dd>正品保证</dd>
+						<dd>7天无理由放心退</dd>
+						<dd>退货返10元唯品币</dd>
+						<dd>7x15小时客户服务</dd>
+						<dd>7天无理由随心换</dd>
+					</dl>
+					<dl class="list_link">
+						<dt>购物指南</dt>
+						<dd>导购演示</dd>
+						<dd>订单操作</dd>
+						<dd>会员注册</dd>
+						<dd>账户管理</dd>
+						<dd>收货样品</dd>
+						<dd>会员等级</dd>
+					</dl>
+					<dl class="list_link">
+						<dt>支付方式</dt>
+						<dd>快捷支付</dd>
+						<dd>23家主流网银支付</dd>
+						<dd>支付宝、银联等支付</dd>
+						<dd>信用卡支付</dd>
+						<dd>零钱支付</dd>
+					</dl>
+					<dl class="list_link">
+						<dt>配送方式</dt>
+						<dd>全场满288元免运费</dd>
+						<dd>配送范围及运费</dd>
+						<dd>验货与签收</dd>
+						
+					</dl>
+					<dl class="list_link">
+						<dt>售后服务</dt>
+						<dd>退货政策</dd>
+						<dd>退货流程</dd>
+						<dd>退款方式和时效</dd>
+						<dd>换货服务</dd>
+						<dd>收货样品</dd>
+						<dd>会员等级</dd>
+					</dl>
+					<dl class="list_ct">
+						<dt>唯品会APP二维码</dt>
+						<dd><img src="img/8.2.png" ></dd>
+						<dd>下载唯品会移动APP</dd>
+					</dl>
+				</div>
+				<div class="footer_info">
+					<p>关于我们| About us| Investor Relations| 媒体报道| 品牌招商| 隐私条款| 唯品诚聘| 唯品卡| 联系我们</p>
+					<p><span>Copyright © 2008-2019 vip.com，All Rights Reserved  使用本网站即表示接受 唯品会用户协议。版权所有 广州唯品会电子商务有限公司 </span>
+						<span>粤公网安备 44010302111111号    粤ICP备08114786号 增值业务经营许可证：粤B2-20170777 网络文化经营许可证：粤网文〔2018〕5030-1743号 </span>
+						<span>自营主体经营证照   风险监测信息   互联网药品信息服务资格证书：（粤）-经营性-2018-0271 网络食品交易第三方平台备案凭证：粤B2-20170777 医疗器械网络交易服务第三方平台</span>
+						<span>备案凭证：（粤）网械平台备字[2019]第00001号</span>
+					</p>
+				</div>
+				<div class="footer_bottom">
+					<span></span>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
