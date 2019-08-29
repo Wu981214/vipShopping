@@ -22,31 +22,50 @@
 			top_please_top =document.getElementsByClassName("top_please_top")[0];
 			lg=document.getElementsByClassName("lg")[0];
 			accountNumber_p = document.getElementsByClassName("accountNumber_p")[0];
-			var url=window.location.href;
-			var urlIndex = url .split("?username=")[1];
-			var arr = urlIndex.split("$id=");
-			console.log(arr);
-			user =arr[0];
-			id = arr[1];
-			let str="";
-			if(user!=null){
-				str=`
-					你好!${user}
-				`;
-				pleaselogin.innerHTML=str;
-				top_please_top.innerHTML="";
-				lg.innerHTML=str;
-				accountNumber_p.innerHTML=str;
-			}
 			womensWear =document.getElementsByClassName("womensWear")[0];
-			womensWear.onclick=function(){
-				let url= "http://localhost:8080/list.html?name="+user;
-				location.href=url;
+			var url=window.location.href;
+			if(url.indexOf("?")===-1){
+				womensWear.onclick=function(){
+					alert("请先登录在使用此功能!!");
+					/* let url= "http://localhost:8080/list.html?name="+user;
+					location.href=url; */
+				
+				} 
+			}else{
+				var urlIndex = url .split("?username=")[1];
+				var arr = urlIndex.split("$id=");
+				console.log(arr);
+				user =arr[0];
+				id = arr[1];
+				let str="";
+				if(user!=null){
+					str=`
+						你好!${user}
+					`;
+					pleaselogin.innerHTML=str;
+					top_please_top.innerHTML="";
+					lg.innerHTML=str;
+					accountNumber_p.innerHTML=str;
+				}
+				var information = JSON.parse(getCookie(user));
+				var exent =  Object.getOwnPropertyNames(information).length;
+				$(".shopping_link_num").html(exent); 
+				womensWear.onclick=function(){
+					
+					 let url= "http://localhost:8080/list.html?name="+user;
+					location.href=url; 
+				
+				} 
 			}
+			
+			
+			
+
+			
 			shopping_link=document.getElementsByClassName("shopping_link")[0];
 			shopping_link.onclick=function(){
-				let url= "http://localhost:8080/cart.html?name="+user;
-				location.href=url;
+					let url= "http://localhost:8080/cart.html?name="+user;
+					location.href=url;
 			}
 			
 		}
@@ -77,7 +96,7 @@
 							</ul>
 					</div>
 					<div class="top_please_none" id="stamp">
-						<span class="top_please_top">请登录</span>
+						<span class="top_please_top"><a href="login.html">请登录</a></span>
 						<span class="top_please_lucency"></span>
 						<div class="top_please_login">
 							<div class="top_please_login_top">

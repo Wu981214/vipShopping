@@ -59,7 +59,7 @@ $(function(){
 			$(".details_data").html(str1);
 			$(".dtl_num").val(1);
 			let value = 1;
-			let count =0;
+			let count =1;
 			//加减实现
 			$(".plus_").click(function(){
 				value++;

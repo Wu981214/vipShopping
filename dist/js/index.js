@@ -2,12 +2,14 @@ $(function(){
 	//侧边栏
 
 	//侧边购物数量展示
-	var url=window.location.href;
+/* 	var url=window.location.href;
 	var urlIndex = url .split("?username=")[1];
-	user =urlIndex;
-	var information = JSON.parse(getCookie(user));
+	user =urlIndex; */
+	/* var information = JSON.parse(getCookie(user));
 	var exent =  Object.getOwnPropertyNames(information).length;
-	$(".shopping_link_num").html(exent); 
+	$(".shopping_link_num").html(exent); */
+	
+	
 	let num=0;
 	//轮播图
 	let timer = setInterval(function(){

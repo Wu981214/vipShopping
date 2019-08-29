@@ -1,18 +1,18 @@
 function Cart(name){
 	this.user =name;
-	console.log(getCookie(this.user));
+	//console.log(getCookie(this.user));
 	if(getCookie(this.user)!==undefined){
 		this.cartData =JSON.parse(getCookie(this.user));
 	}else{
 		console.log("a");
 		this.cartData={};
 	}
-	console.log(this.cartData);
+	//console.log(this.cartData);
 }
 
 
 Cart.prototype.add=function(id,val){
-	console.log(val);
+	//console.log(val);
 	if(this.cartData[id]===undefined){
 		this.cartData[id]=Number(val);
 	}else{
@@ -57,7 +57,7 @@ Cart.prototype.show=function(obj){
 								<span class="minus" cartID="${id}">-</span>
 							</div>
 							<div class="cart_totalPlace">
-								<span>￥<b>${data[i].dPrice*this.cartData[id]}</b></span>
+								<span>￥<b class="total_Price">${data[i].dPrice*this.cartData[id]}</b></span>
 							</div>
 							<div class="cart_del">
 								<a href="javascriptvoid:;" cartID="${id}">删除</a>
@@ -81,6 +81,7 @@ Cart.prototype.show=function(obj){
 		}
 	});
 	_this.input();
+	_this.totalPrice();
 }
 
 Cart.prototype.del=function(id,obj){
@@ -89,6 +90,7 @@ Cart.prototype.del=function(id,obj){
 	this.cartList.removeChild(obj);
 	delete this.cartData[id];
 	setCookie(this.user,JSON.stringify(this.cartData),7);
+	window.onload();
 }
 
 
@@ -122,4 +124,18 @@ Cart.prototype.input=function(){
 		window.onload(); 
 		}
 	}
+}
+Cart.prototype.totalPrice=function(){
+	let  totalPrice = document.getElementsByClassName("total_Price");
+	let zj = document.getElementsByClassName("zj");
+	//console.log(totalPrice);
+	let str =0;
+	for(let i=0;i<totalPrice.length;i++){
+		str+=Number(totalPrice[i].innerText);
+	}
+	//console.log(str);
+	 for(let i=0;i<zj.length;i++){
+		zj[i].innerHTML=str;
+	} 
+	
 }
